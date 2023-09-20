@@ -1,24 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {useState, useEffect} from "react";
+import SideBar from './components/SideBar';
+import { TATKAL, TATKAL_FOOD, CREDIT_CARD, SEVA, ACCOMODATION, SEVA_LOGIN} from './utils/urls';
 
 function App() {
+  const [data,setData] = useState({});
+  const [navBarItem,setNavBarItem] = useState("Tatkal");
+  const [url,setUrl] = useState(TATKAL);
+  
+  useEffect(()=>{
+    fetchData();
+  },[url])
+
+  const handleClick = (event) => {
+    if(event.target.innerText === "Tatkal"){
+      setNavBarItem("Tatkal");
+      setUrl(TATKAL);
+    } else if(event.target.innerText === "Tatkal Food"){
+      setNavBarItem("Tatkal Food");
+      setUrl(TATKAL_FOOD);
+    } else if(event.target.innerText === "Credit Card"){
+      setNavBarItem("Credit Card");
+      setUrl(CREDIT_CARD);
+    } else if(event.target.innerText === "Seva"){
+      setNavBarItem("Seva");
+      setUrl(SEVA);
+    } else if(event.target.innerText === "Accomodation"){
+      setNavBarItem("Accomodation");
+      setUrl(ACCOMODATION);
+    }  else if(event.target.innerText === "Seva Login"){
+      setNavBarItem("Seva Login");
+      setUrl(SEVA_LOGIN);
+    }
+  }
+  const fetchData = async () => {
+    const data = await fetch(url);
+    const json = await data.json(); 
+    setData(json);
+    // setTatkalData(json);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h1 id='title'>Booking Automation!🙏</h1>
+    <ul className='nav-bar'>
+      <li><button onClick={handleClick} type='button'>Tatkal</button></li>
+      <li><button onClick={handleClick} type='button'>Tatkal Food</button></li>
+      <li><button onClick={handleClick} type='button'>Credit Card</button></li>
+      <li><button onClick={handleClick} type='button'>Seva</button></li>
+      <li><button onClick={handleClick} type='button'>Accomodation</button></li>
+      <li><button onClick={handleClick} type='button'>Seva Login</button></li>
+    </ul>
+    <SideBar data={data} menu={navBarItem}/>
+    </>
   );
 }
 
