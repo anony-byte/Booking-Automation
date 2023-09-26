@@ -1,7 +1,7 @@
 import './App.scss';
 import {useState, useEffect} from "react";
 import SideBar from './components/SideBar';
-import { TATKAL, TATKAL_FOOD, CREDIT_CARD, SEVA, ACCOMODATION, SEVA_LOGIN} from './utils/urls';
+import { TATKAL, TATKAL_FOOD, CREDIT_CARD, SEVA, ACCOMODATION, SEVA_LOGIN,RS_300} from './utils/urls';
 
 function App() {
   const [data,setData] = useState({});
@@ -31,6 +31,9 @@ function App() {
     }  else if(event.target.innerText === "Seva Login"){
       setNavBarItem("Seva Login");
       setUrl(SEVA_LOGIN);
+    } else if(event.target.innerText === "300"){
+      setNavBarItem("300");
+      setUrl(RS_300);
     }
   }
   const fetchData = async () => {
@@ -46,6 +49,7 @@ function App() {
     <ul className='nav-bar'>
       <li><button onClick={handleClick} type='button'>Tatkal</button></li>
       <li><button onClick={handleClick} type='button'>Tatkal Food</button></li>
+      <li><button onClick={handleClick} type='button'>300</button></li>
       <li><button onClick={handleClick} type='button'>Credit Card</button></li>
       <li><button onClick={handleClick} type='button'>Seva</button></li>
       <li><button onClick={handleClick} type='button'>Accomodation</button></li>
