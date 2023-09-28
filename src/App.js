@@ -47,13 +47,13 @@ function App() {
     <>
     <h1 id='title'>Booking Automation!🙏</h1>
     <ul className='nav-bar'>
-      <li><button onClick={handleClick} type='button'>Tatkal</button></li>
-      <li><button onClick={handleClick} type='button'>Tatkal Food</button></li>
-      <li><button onClick={handleClick} type='button'>300</button></li>
-      <li><button onClick={handleClick} type='button'>Credit Card</button></li>
-      <li><button onClick={handleClick} type='button'>Seva</button></li>
-      <li><button onClick={handleClick} type='button'>Accomodation</button></li>
-      <li><button onClick={handleClick} type='button'>Seva Login</button></li>
+      <li><button className="button"onClick={handleClick} type='button'>Tatkal</button></li>
+      <li><button className="button"onClick={handleClick} type='button'>Tatkal Food</button></li>
+      <li><button className="button"onClick={handleClick} type='button'>300</button></li>
+      <li><button className="button"onClick={handleClick} type='button'>Credit Card</button></li>
+      <li><button className="button"onClick={handleClick} type='button'>Seva</button></li>
+      <li><button className="button"onClick={handleClick} type='button'>Accomodation</button></li>
+      <li><button className="button"onClick={handleClick} type='button'>Seva Login</button></li>
     </ul>
     <SideBar data={data} menu={navBarItem}/>
     </>

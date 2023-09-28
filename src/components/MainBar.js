@@ -9,8 +9,6 @@ const MainBar = (props) => {
         setData(props.data);
         setIsDataArray(props.isDataArray);
     }, [props.data, props.isDataArray]);
-    // console.log("Props data : ", props.data);
-    // console.log(props.data);
     return (
         <div className="main-area">
             {isDataArray && data ? (
@@ -28,14 +26,6 @@ const MainBar = (props) => {
                     <p>{data}</p>
                 </div>
             )}
-            {/* {data.map((row) => {
-                Object.keys(row).map(key => (
-                    <>
-                    <p>{key}</p>
-                    <p>{row[key]}</p>
-                    </>
-                ))
-            })} */}
         </div>
     );
 }

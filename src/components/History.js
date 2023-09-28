@@ -1,21 +1,31 @@
 import React, { useState } from 'react'
-import { useEffect } from 'react';
 const History = (props) => {
-    const[history,setHistory] = useState(props.data);
-    // console.log(props.data);
-    // console.log("Coming here");
-    useEffect(() => {
-        setHistory(props.data);
-    }, [props.data]);
-    return (
-        <div className='history-container'>
-          {history.map((item, index) => (
-            <p key={index}>
-              Panel Name: {item.panel_name}, Sheet No: {item.sheet_no}, Timestamp: {item.timestamp}
-            </p>
-          ))}
-        </div>
-    );
+  const history = props.data;
+  return (
+    <div className='history-container'>
+      <h2 className='title'>History</h2>
+      <div className="content">
+        <table>
+          <thead>
+            <tr>
+              <th>Panel Name</th>
+              <th>Sheet No</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            {history.map((item) => (
+              <tr>
+              <td>{item.panel_name}</td>
+              <td>{item.sheet_no}</td>
+              <td>{item.timestamp}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+            </div>
+      </div>
+  );
 }
 
 export default History; 

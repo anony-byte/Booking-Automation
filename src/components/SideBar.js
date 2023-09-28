@@ -6,17 +6,11 @@ import History from "./History";
 const SideBar = (props) => {
     const [buttonHovered, setButtonHovered] = useState(0);
     const [history, setHistory] = useState([]);
-    // console.log("Props data" , props.data);
     let apiData = props.data;
     let menu = props.menu;
-    // console.log(apiData);
 
     const handleSideButton = (buttonNo) => {
-        // console.log("Button hovered");
-        // console.log(buttonNo);
         setButtonHovered(buttonNo);
-        // console.log(buttonNo);
-        // console.log(apiData[("Sheet"+buttonHovered)]);
     };
 
     const callExecuteEndpoint = async (buttonNo) => {
@@ -25,12 +19,9 @@ const SideBar = (props) => {
         const url = `http://127.0.0.1:5000/execute/${option}/${sheetNo}`
         const data = await fetch(url);
         const json = await data.json();
-        console.log("history",json);
         setHistory(json);
     }
     const handleSideButtonClick = (buttonNo) => {
-        // console.log("Menu : ",menu);
-        // console.log("Button clicked : ", buttonNo);
         callExecuteEndpoint(buttonNo); 
     }; 
 
