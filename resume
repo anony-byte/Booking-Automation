@@ -1,0 +1,253 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+	{#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+	\item\small{
+    	{#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+	\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  	\textbf{#1} & \textbf{\small #2} \\
+  	\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  	\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+  	\small#1 & \textbf{\small #4}\\
+	\end{tabular*}\vspace{-7pt}}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+	{\Huge \scshape Bhargav Dimili} \\ \vspace{1pt}
+	Vizianagaram, Andhra Pradesh \\ \vspace{1pt}
+	\small \raisebox{-0.1\height}\faPhone\ +91 9849699301 ~ \href{mailto:x@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{bhargavdimili@gmail.com}} ~
+	\href{https://linkedin.com/in//}{\raisebox{-0.2\height}\faLinkedin\ \underline{www.linkedin.com/in/bhargav-dimili}}
+	\vspace{-8pt}
+ 
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+	\resumeSubheading
+  	{Visveswaraya Nation Institute of Technology}{August 2017 - June 2021}
+  	{Bachelor of Technology in Electronics and communication}{Nagpur, Maharashtra}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\begin{center}
+     \underline{{\textbf{Société Générale}}}
+\end{center}
+
+    \vspace{-15pt}
+  \resumeSubHeadingListStart
+    	\resumeSubheading
+  	{Traditional Infra Automation }{Feb 2023 — Present}
+  	{ React, typescript, Spring Boot, Hibernate, Spring MVC, REST API, Reduxjs, Router, Framer motion} {Software Engineer}
+  	\resumeItemListStart
+    	\resumeItem{Developed an application (frontend and backend) from scratch which plans to expose all the
+APIs/Automation work done so far under one roof.
+This is the top solution for end users.}
+\resumeItem{This led to an approximately \textbf{15\%} \textbf{decrease} in API calls to iamaas and a reduction of nearly \textbf{10\%} in the generation of unnecessary access tokens.}
+	\resumeItemListEnd
+
+ 
+	\resumeSubheading
+  	{Monitoring Dashboard }{Feb 2022 — Oct 2022}
+  	{ React, Flask, MongoDB, Jenkins, Inline Sass, Nextjs, REST API, Tailwind}{Software Engineer}
+  	\resumeItemListStart
+    	\resumeItem{Participated in development of frontend and backend of monitoring dashboard where clients can monitor
+the status of their desired services}
+    	\resumeItem{Clients can subscribe themselves using their professional mail to get the real time updates about the services. This application saves alot of time for customers without checking the individual services required for them}
+	\resumeItemListEnd
+   	\resumeSubheading
+  	{OSF api design \& OSC Migration}{Aug 2021 — present}
+  	{Flask, Swagger, SQLAlchemy, PostgreSQL, S3, Celery, RabbitMQ, Pytest} {Software Engineer}
+  	\resumeItemListStart
+    	\resumeItem{Design and Build API to help clients create images for their servers and migrating the db from s3 to pg to OSC}
+\resumeItem{Designed \textbf{osf-inventory}, a migration script that migrates existing images in s3 to pg and designed \textbf{osf-db-lib} that uses \textbf{sqlalchemy} ORM in background for easy filtering. Participated in SCHEMA Design of PG for less data duplication. }
+\resumeItem{This initiative led to a nearly 15\% reduction in expenses, demonstrating an exceptionally efficient strategy that outperformed the previous version by nearly \textbf{10x} in terms of speed. }
+
+	\resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+  
+
+
+
+%-----------PROJECTS-----------
+\section{Personal Projects}
+	\vspace{-5pt}
+	\resumeSubHeadingListStart
+	\resumeProjectHeading
+      	{\textbf{Technolamy} $|$ \emph{React, Spring Boot, JPA, JSTL, Tomcat, PostgreSQL, H2, REST API, LLD, Framer.}}{January 2019}
+      	\resumeItemListStart
+\resumeItem{
+ Developed a comprehensive full-stack application enabling users to determine the optimal mobile device based on their specified budget and designed a user-friendly platform where individuals can access peer reviews, average ratings, and detailed information on specific mobile devices.
+}
+
+\resumeItem{
+ Implemented a comparison feature allowing users to evaluate up to ten different mobile devices, offering insights into their distinctions and recommending the most suitable option.
+}
+
+\resumeItem{
+ Created a dynamic home page featuring the latest technology news, with advanced filtering and search capabilities based on tags and incorporated various supplementary features to enhance user experience and functionality.
+}      	\resumeItemListEnd
+	\vspace{-13pt}
+  	\resumeProjectHeading
+      	{\textbf{Art Centre, VZM} $|$ \emph{React, TypeScript, Spring boot, NodeJS, MongoDB and Express}}{January 2019}
+      	\resumeItemListStart
+        	\resumeItem{Implemented robust features for admin to record and categorize their expenses and income sources, providing a clear overview of their financial activity within his business}
+         \resumeItem{Designed dynamic financial reports with intuitive data visualization tools, including charts and graphs, to empower users with insightful financial insights and trends.}
+      	\resumeItemListEnd
+\vspace{-13pt}
+       \resumeProjectHeading
+      	{\textbf{MovieDB} $|$ \emph{React JS, Flask, MongoDB, Express, TMDB, IMDB}}{January 2019}
+      	\resumeItemListStart
+        	\resumeItem{Designed a MOVIEDB where people can find movies and get recommendations based on their interest and
+review and rate them.}
+         \resumeItem{A small local cache to get frequent details faster.}
+      	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%
+%-----------Achievements-----------
+% \section{Achievements [Add all kind of achievements that shows your skills]}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+% 	\resumeItemListStart
+%     	\resumeItem{Highest rating of \textbf{ xxxx} at Codeforces, which is the top site in terms of participation of programmers across globe.}
+%     	\resumeItem{Ranked under \textbf{xyz} at Codechef which ranks among the top sites for competitive programmers. Highest rating of 2299 and rated \textbf{6*}. }
+%     	\resumeItem{Qualified the prestigious ACM-ICPC regionals \textbf{thrice} and ranked Z in one of the attempts. }
+%     	\resumeItem{Secured all India rank of \textbf{r, s, t} respectively in Codechef's Long Challenge in the month of February, April and May xyzh among 12k+ participants.}
+%     	\resumeItem{Secured all India rank of \textbf{uh} in TCS codevita 2019.}
+%     	\resumeItem{Written over \textbf{0987643} articles at Geeksforgeeks, most of them being on Data Structure and Algorithms}
+%     	\resumeItem{Solved more than 2000+ problems across platforms.}
+%     	\resumeItem{Awarded with Geek of the year accolade from GeeksforGeeks for contribution to the community. \href{https://www.geeksforgeeks.org/geek-of-the-year/}{(Link)} }
+%   	\resumeItemListEnd
+%  \end{itemize}
+%  \vspace{-16pt}
+ 
+ %
+%-----------Profile Links-----------
+\section{Profile Links}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+	\resumeItemListStart
+    	\resumeItem {\href{https://github.com/anony-byte}{GitHub}}
+  	\resumeItemListEnd
+ \end{itemize}
+ \vspace{-16pt}
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+ 	\textbf{Languages}{: Java, Python, HTML/CSS, JavaScript, PostgreSQL, Bash} \\
+ 	\textbf{Technologies/Frameworks/Libraries}{: Spring Boot, ReactJS, TypeScript, LLD, React Native, Data Structures, Alogorithms, Framer motion, GIT, Jenkins} \\
+	}}
+ \end{itemize}
+ \vspace{-16pt}
+
+\end{document}
+
